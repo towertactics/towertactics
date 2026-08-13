@@ -1,0 +1,28 @@
+{
+    "header": {
+        "title": "Header",
+        "body": "disc"
+    },
+    "mainline": {
+        "title": "Main body card",
+        "body": "Stuff"
+    },
+    "aboutme": {
+        "title": "The Writer",
+        "body": "type2"
+    },
+    "inspirations": {
+        "title": "Inspirations",
+        "body": "Artists"
+    },
+    "navigation": [
+        {
+            "title" : "Wiki",
+            "link" : "https://wiki.towertactics.live"
+        },
+        {
+            "title": "Art",
+            "link": "/Art"
+        }
+    ]
+}

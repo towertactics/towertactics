@@ -1,0 +1,122 @@
+/* Some Colors */
+:root {
+  --card-text-header: #2D2327;
+  --card-text-n: #45364B;
+  --card-background: #B5C2B7;
+  --card-border-color: #62466B;
+  --card-shadow: rgba(0, 0, 0, 0.075) 0 10px 15px -3px, 
+    #a1abb073 0 1px 3px -1px;
+}
+
+/* Some Fonts */
+@font-face {
+  font-family: Bebas-Regular;
+  src: url('../assets/font/BebasNeue-Regular.otf');
+}
+:root {
+  --font-main: Bebas-Regular
+}
+
+/* Main Strip */
+.mainline {
+  /* background-color: var(--card-background); */
+  box-shadow: var(--card-shadow);
+  padding: 2px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  /* border-color: var(--card-border-color) 4; */
+}
+
+/* About Me Card */
+.aboutme {
+  background-color: var(--card-background);
+  box-shadow: var(--card-shadow);
+  padding: 2px;
+  min-width: 25%;
+  max-width: 350px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: var(--card-border-color) 4;
+  display: flex;
+}
+
+.aboutme-header {
+  color: var(--card-text-header);
+  text-align: left;
+  font-family: var(--font-main);
+  font-size: 3cap;
+  padding: 10px;
+}
+
+.aboutme-text {
+  color: var(--card-text-n);
+  font-family: var(--font-main);
+}
+
+/* Inspirations Card */
+.inspirations {
+  background-color: var(--card-background);
+  box-shadow: var(--card-shadow);
+  padding: 2px;
+  min-width: 25%;
+  max-width: 350px; 
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: var(--card-border-color) 4;
+}
+
+.inspirations-header {
+  color: var(--card-text-header);
+  text-align: left;
+  font-family: var(--font-main);
+  font-size: 3cap;
+  padding: 10px;
+}
+
+.inspirations-text {
+  color: var(--card-text-n);
+  font-family: var(--font-main);
+  text-align: right;
+}
+
+/* Navigation */
+.navbar .btn {
+  text-decoration: none;
+  user-select: none;
+}
+
+.navbar .btn:focus,
+.navbar .btn:active {
+  text-decoration: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.navbutton:hover {
+  box-shadow: inset var(--card-border-color) 0 6px 5px -7px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.navbar {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  min-width: 30%;
+  max-width: 50%;
+}
+
+.navbutton {
+  padding: 20px;
+  color: var(--card-text-n);
+  font-family: var(--font-main);
+  font-size: 50px;
+  line-height: 2;
+  padding-top: 0.4em;
+  padding-bottom: 10px;
+  transition: box-shadow 0.2s ease;
+}
+
