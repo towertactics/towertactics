@@ -10,8 +10,8 @@
   --accent-border: rgba(170, 59, 255, 0.5);
   --social-bg: rgba(244, 243, 236, 0.5);
   --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-
+    rgba(0, 0, 0, 0.336) 0 9px 20px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --shadowin: rgba(247, 241, 241, 0.226) 0px 9px 17px 0px, rgba(247, 242, 242, 0.05) 0 4px 6px 0px;
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
@@ -31,6 +31,41 @@
   }
 }
 
+@media (prefers-color-scheme: dark){
+  :root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #45364B;
+  --bg-alt: #8C93A8;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.336) 0 9px 20px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --shadowin: rgba(0, 0, 0, 0.336) 0px 9px 17px 0px, rgba(0, 0, 0, 0.05) 0 4px 6px 0px;
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+    }
+  }
+}
+
 body {
   margin: 0 auto;
 }
@@ -46,6 +81,7 @@ body {
   min-height: 100svh;
 }
 
+/* Top Bar */
 #top-bar {
   margin: 0, auto;
   max-height: 10svh;
@@ -55,8 +91,15 @@ body {
   position: sticky;
   overflow: hidden;
   top: 0;
+  box-shadow:
+    inset var(--shadowin),
+    var(--shadow);
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  display: flex;
 }
 
+/* Cards */
 #cardspace {
   margin: 0 auto;
   max-width: 95%;
@@ -68,10 +111,12 @@ body {
   max-width: 40%;
 }
 
+/* Main Strip */
 #mainline {
   margin: 0 auto;
   text-align: center;
   max-width: 60%;
+  padding: 2px;
 }
 
 #right-cards {

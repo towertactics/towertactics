@@ -1,10 +1,11 @@
 /* Some Colors */
 :root {
-  --card-text-header: #2D2327;
-  --card-text-n: #45364B;
-  --card-background: #B5C2B7;
-  --card-border-color: #62466B;
-  --card-shadow: rgba(0, 0, 0, 0.075) 0 10px 15px -3px, 
+  --text-header: #2d2327;
+  --text-header-alt: #A1ABB0;
+  --text-n: #45364B;
+  --background: #B5C2B7;
+  --border-color: #62466B;
+  --shadow: rgba(0, 0, 0, 0.075) 0 10px 15px -3px, 
     #a1abb073 0 1px 3px -1px;
 }
 
@@ -17,33 +18,43 @@
   --font-main: Bebas-Regular
 }
 
-/* Main Strip */
-.mainline {
-  /* background-color: var(--card-background); */
-  box-shadow: var(--card-shadow);
-  padding: 2px;
-  border-width: 2px;
-  border-style: solid;
-  border-radius: 5px;
-  /* border-color: var(--card-border-color) 4; */
+.home-header {
+  color: var(--text-header-alt);
+  
+  font-family: var(--font-main);
+  font-size: 60px;
+  line-height: 75px;
+  white-space: pre-line;
+}
+
+.home-subheader {
+  color: var(--text-header);
+  font-family: var(--font-main);
+  font-size: 60px;
+  line-height: 75px;
+}
+
+.home-text {
+  font-family: var(--font-main);
+  white-space: pre-line;
 }
 
 /* About Me Card */
 .aboutme {
-  background-color: var(--card-background);
-  box-shadow: var(--card-shadow);
+  background-color: var(--background);
+  box-shadow: var(--shadow);
   padding: 2px;
   min-width: 25%;
   max-width: 350px;
   border-width: 2px;
   border-style: solid;
   border-radius: 5px;
-  border-color: var(--card-border-color) 4;
+  border-color: var(--border-color) 4;
   display: flex;
 }
 
 .aboutme-header {
-  color: var(--card-text-header);
+  color: var(--text-header);
   text-align: left;
   font-family: var(--font-main);
   font-size: 3cap;
@@ -51,25 +62,25 @@
 }
 
 .aboutme-text {
-  color: var(--card-text-n);
+  color: var(--text-n);
   font-family: var(--font-main);
 }
 
 /* Inspirations Card */
 .inspirations {
-  background-color: var(--card-background);
-  box-shadow: var(--card-shadow);
+  background-color: var(--background);
+  box-shadow: var(--shadow);
   padding: 2px;
   min-width: 25%;
   max-width: 350px; 
   border-width: 2px;
   border-style: solid;
   border-radius: 5px;
-  border-color: var(--card-border-color) 4;
+  border-color: var(--border-color) 4;
 }
 
 .inspirations-header {
-  color: var(--card-text-header);
+  color: var(--text-header);
   text-align: left;
   font-family: var(--font-main);
   font-size: 3cap;
@@ -77,7 +88,7 @@
 }
 
 .inspirations-text {
-  color: var(--card-text-n);
+  color: var(--text-n);
   font-family: var(--font-main);
   text-align: right;
 }
@@ -96,7 +107,7 @@
 }
 
 .navbutton:hover {
-  box-shadow: inset var(--card-border-color) 0 6px 5px -7px;
+  box-shadow: inset var(--border-color) 0 6px 5px -7px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
@@ -105,13 +116,11 @@
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  min-width: 30%;
-  max-width: 50%;
 }
 
 .navbutton {
   padding: 20px;
-  color: var(--card-text-n);
+  color: var(--text-n);
   font-family: var(--font-main);
   font-size: 50px;
   line-height: 2;
@@ -120,3 +129,17 @@
   transition: box-shadow 0.2s ease;
 }
 
+.homebar .btn{
+  text-decoration: none;
+  user-select: none;
+}
+.homebutton {
+  padding-left: 20px;
+  color: var(--text-n);
+  font-family: var(--font-main);
+  font-size: 50px;
+  line-height: 2;
+  padding-top: 0.4em;
+  padding-bottom: 10px;
+  transition: box-shadow 0.2s ease;
+}

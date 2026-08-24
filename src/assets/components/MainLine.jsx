@@ -3,12 +3,15 @@ import texts from '../texts.json';
 export default function MainLine(){
     return (
         <div>
-            <section className="mainline">
-                <header className="mainline-header"> 
-                    {texts.mainline.title}
+            <section className="home">
+                <header className="home-header"> 
+                    {texts.home.title}
                     </header>
-                    <h className="mainline-text">
-                        {texts.mainline.body}
+                    <header className='home-subheader'>
+                        {texts.home.subtitle}
+                    </header>
+                    <h className="home-text">
+                        {texts.home.body}
                     </h>
             </section>
         </div>
