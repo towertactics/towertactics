@@ -3,7 +3,7 @@ name: Deploy to towertactics.live
 on:
   push:
     branches:
-      - main
+      - Main
 
 jobs:
   deploy:
