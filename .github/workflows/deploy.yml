@@ -8,6 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      NODE_VERSION: v22.23.1
     steps:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.2.2
@@ -15,4 +17,14 @@ jobs:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_SSH_KEY }}
-          script: /var/www/towertactics/deploy.sh
+          script: |
+            export NVM_DIR="$HOME/.nvm"
+            if [ -s "$NVM_DIR/nvm.sh" ]; then
+              . "$NVM_DIR/nvm.sh"
+            else
+              echo "nvm is not installed on the deploy host." >&2
+              exit 1
+            fi
+            nvm install "$NODE_VERSION"
+            nvm use "$NODE_VERSION"
+            /var/www/towertactics/deploy.sh
